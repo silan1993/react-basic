@@ -1,5 +1,5 @@
 import React from 'react';
-const person = () =>{
+const person = (props) =>{
     return <p> I am a person</p>
 }
 
