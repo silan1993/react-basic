@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 class Counter extends Component {
-  state = {
-    count: 0,
-    tags: ["tag1", "tag2", "tag3"],
-  };
-
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.handleIncrement.bind(this);
   }
+  state = {
+    count: this.props.value,
+    tags: ["tag1", "tag2", "tag3"],
+  };
   renderTags() {
     if (this.state.tags.length == 0) return <p>'there are no tags'</p>;
     return (
@@ -23,8 +22,10 @@ class Counter extends Component {
     this.setState({ count: this.state.count + 1 });
   };
   render() {
+    console.log(this.props);
     return (
       <div>
+        <h5>counter # {this.props.id}</h5>
         <span style={this.getBatchColor()}>{this.formatCount()}</span>
         <button onClick={this.handleIncrement}>Incerement</button>
         {this.renderTags()}
