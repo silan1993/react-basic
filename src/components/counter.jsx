@@ -9,10 +9,16 @@ class Counter extends Component {
       <div>
         <h5>counter # {this.props.counter.id}</h5>
         <span style={this.getBatchColor()}>{this.formatCount()}</span>
-        <button onClick={() => this.props.onIncrement(this.props.counter)}>
+        <button
+          className="btn btn-primary"
+          onClick={() => this.props.onIncrement(this.props.counter)}
+        >
           Incerement
         </button>
-        <button onClick={() => this.props.onDelete(this.props.counter.id)}>
+        <button
+          className="btn btn-danger"
+          onClick={() => this.props.onDelete(this.props.counter.id)}
+        >
           Delete
         </button>
       </div>
