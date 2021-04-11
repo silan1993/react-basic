@@ -4,6 +4,18 @@ class Counter extends Component {
     super(props);
   }
 
+  // it gets called when 1 compnent gets updated. you can compare the data here and decide to make to api or not
+  componentDidUpdate(prevProps, prevState) {
+    console.log("component updated");
+    console.log(prevProps, "prevProps");
+    console.log(prevState, "prevState");
+  }
+
+  // it gets called when 1 compnent gets removed. you can compare the data here and decide to make to api or not
+
+  componentWillUnmount(prevProps, prevState) {
+    console.log("compoennt deleted");
+  }
   render() {
     return (
       <div>

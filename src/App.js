@@ -15,6 +15,11 @@ class App extends Component {
     ],
   };
 
+  //1st constructor will be set you cal set your state here
+  constructor(props) {
+    console.log("constructor called");
+    super(props);
+  }
   handleIncrement = (counter) => {
     let newCounter = [...this.state.counters];
     let index = this.state.counters.indexOf(counter);
@@ -34,7 +39,15 @@ class App extends Component {
     console.log(newCounter);
     this.setState({ counters: newCounter });
   };
+
+  //3rd it gets called when all element gets called. you can make api calls here bring data and pass to the state
+  componentDidMount() {
+    console.log("component mounted");
+  }
   render() {
+    //2nd react element will be rendered
+
+    console.log("renered");
     return (
       <React.Fragment>
         <Navbar
