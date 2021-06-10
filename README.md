@@ -67,14 +67,13 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
-
 react js is javascript library for user interface
 react component is custom html element
 
 mantainable managbel and reusabel piece of html code
 
-Contains
----------------
+## Contains
+
 Basics of react
 Debugging
 Styling Component
@@ -84,11 +83,19 @@ Routing
 Forms and Validation
 Redux
 
-
 dependecies
 
--------------
+---
+
 NPM
-bundler:- write moduler code and each module  to be passed to other file and then whole code will be bundled into couple of files.Browser may not support mupltiple files
+bundler:- write moduler code and each module to be passed to other file and then whole code will be bundled into couple of files.Browser may not support mupltiple files
 Webpack: -applied to bundle and also allows couple of bulid steps before bubling
 babel:- convert these js code to browser comptable code
+
+props
+
+you cannot change props value as it is read only
+
+state
+
+you can modifiy state
